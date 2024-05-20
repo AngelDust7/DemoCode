@@ -1,0 +1,50 @@
+﻿<Page x:Class="Sport.AddEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sport"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="800" Background="Wheat"
+      Title="AddEdit">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="369*"/>
+            <ColumnDefinition Width="431*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="67*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="0" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" Width="106"/>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Цена" VerticalAlignment="Top" Width="106"/>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="Производитель" VerticalAlignment="Top" Width="106"/>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="Поставщик" VerticalAlignment="Top" Width="106"/>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="Категория" VerticalAlignment="Top" Width="106"/>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="Скидка" VerticalAlignment="Top" Width="106"/>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="Количество" VerticalAlignment="Top" Width="106"/>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="Описание" VerticalAlignment="Top" Width="106"/>
+        <ComboBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="22,9,0,0" x:Name="ComboNameOfGoods" DisplayMemberPath="NameOfGoods1" SelectedItem="{Binding NameOfGoods}" VerticalAlignment="Top" Width="120"/>
+        <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="22,9,0,0" TextWrapping="Wrap" Text="{Binding Price}" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Margin="22,9,0,0" x:Name="ComboNameOfDeveloper" DisplayMemberPath="NameOfDeveloper"  SelectedItem="{Binding Developer}" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Margin="22,9,0,0" x:Name="ComboNameOfPostavshik" DisplayMemberPath="NameOfPostavshik" SelectedItem="{Binding Postavshik}" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" Margin="22,9,0,0" x:Name="ComboNameOfCategoryOfGoods" DisplayMemberPath="NameOfCategoryOfGoods" SelectedItem="{Binding CategoryOfGoods}" VerticalAlignment="Top" Width="120"/>
+        <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" Margin="22,9,0,0" TextWrapping="Wrap" Text="{Binding Discount}" VerticalAlignment="Top" Width="120"/>
+        <TextBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" Margin="22,9,0,0" TextWrapping="Wrap" Text="{Binding Amount}" VerticalAlignment="Top" Width="120"/>
+        <TextBox Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left" Margin="22,9,0,0" TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" Margin="1,42,0,0" TextWrapping="Wrap" Text="Артикль" VerticalAlignment="Top"/>
+        <TextBox Grid.Column="1"  Grid.Row="7" HorizontalAlignment="Left" Margin="26,40,0,0" TextWrapping="Wrap" Text="{Binding Article}" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" Margin="1,23,0,0" TextWrapping="Wrap" Text="Ед" VerticalAlignment="Top"/>
+        <ComboBox Grid.Column="1" x:Name="ComboEd"  Grid.Row="7" HorizontalAlignment="Left" Margin="157,0,0,0" SelectedItem="{Binding EdIzm}" DisplayMemberPath="NameOfEd" VerticalAlignment="Center" Width="120"/>
+        <Button Grid.Column="1" Content="Save" HorizontalAlignment="Left" Margin="59,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="36" Width="106" Click="Save_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="84,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="35" Width="71"/>
+    </Grid>
+</Page>
